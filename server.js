@@ -1,6 +1,7 @@
 const express = require('express');
 const attendant = require('./services/attendant');
 const contact = require('./services/contact');
+const list = require('./services/list');
 const resource = require('./services/resource');
 const team = require('./services/team');
 
@@ -22,6 +23,12 @@ server.get('/delete-resources', (req, res) => {
     const resources = resource.deleteResource();
 
     return res.json(resources);
+});
+
+server.get('/lists', (req, res) => {
+    const lists = list.getLists();
+
+    return res.json(lists);
 });
 
 server.get('/resources', (req, res) => {
