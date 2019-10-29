@@ -42,4 +42,4 @@ const setAttendants = async (element) => {
     return attendant;
 }
 
-module.exports = { getAllAttendants, setAttendants };
+module.exports = { getAllAttendants };

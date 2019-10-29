@@ -114,7 +114,7 @@ const getPermissions = () => {
     ];
 }
 
-module.exports = { getPermissions, setMembers };
+module.exports = { setMembers };
 
 
    

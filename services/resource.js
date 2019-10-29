@@ -84,4 +84,4 @@ const setResource = async (element, resource) => {
     return true;
 }
 
-module.exports = { deleteResource, getByResource, getResources, setResource };
+module.exports = { deleteResource, getByResource };

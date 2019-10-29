@@ -1,5 +1,6 @@
 const express = require('express');
 const attendant = require('./services/attendant');
+const contact = require('./services/contact');
 const resource = require('./services/resource');
 const team = require('./services/team');
 
@@ -9,6 +10,12 @@ server.get('/attendants', (req, res) => {
     const attendants = attendant.getAllAttendants();
 
     return res.json(attendants);
+});
+
+server.get('/contacts', (req, res) => {
+    const contacts = contact.getContacts();
+
+    return res.json(contacts);
 });
 
 server.get('/delete-resources', (req, res) => {
