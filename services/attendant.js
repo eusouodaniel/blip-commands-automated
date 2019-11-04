@@ -12,7 +12,7 @@ const getAllAttendants = async () => {
         method: 'get',
         uri: "/attendants"
     });
-    attendants.resource.items.forEach(async element => {
+    attendants.forEach(async element => {
         await setAttendants(element);
     });
     return 200;
@@ -33,8 +33,8 @@ const setAttendants = async (element) => {
             uri: "/attendants",
             type: "application/vnd.iris.desk.attendant+json",
             resource: {
-                identity: element["identity"],
-                teams: element["teams"]
+                identity: element+'@blip.ai',
+                teams: ["Default"]
             }
         }
     });

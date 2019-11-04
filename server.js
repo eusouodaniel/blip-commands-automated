@@ -3,6 +3,7 @@ const attendant = require('./services/attendant');
 const contact = require('./services/contact');
 const list = require('./services/list');
 const resource = require('./services/resource');
+const schedule = require('./services/schedule');
 const team = require('./services/team');
 
 const server = express();
@@ -35,6 +36,12 @@ server.get('/resources', (req, res) => {
     const resources = resource.getByResource();
 
     return res.json(resources);
+});
+
+server.get('/schedule/:id', (req, res) => {
+    const schedules = schedule.getBySchedule(req.params.id);
+
+    return res.json(schedules);
 });
 
 server.get('/teams', (req, res) => {

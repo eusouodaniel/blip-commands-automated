@@ -12,7 +12,7 @@ const getLists = async _ => {
         method: 'get',
         uri: '/lists'
     });
-    data.resource.items.forEach(element => {
+    data.resource.items.forEach(async element => {
         const list = await createList(element);
 
         const members = await getMembersByList(element);

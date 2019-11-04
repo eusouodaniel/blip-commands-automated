@@ -1,6 +1,5 @@
 const uuidv4 = require('uuid/v4');
 const axios = require('axios');
-const blip = require('./blip');
 require("dotenv/config");
 
 const deleteResource = async _ => {
