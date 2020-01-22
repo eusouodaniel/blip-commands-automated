@@ -12,7 +12,7 @@ const getContacts = async _ => {
         uri: '/contacts'
     });
 
-    await setContact(data.resource.items)
+    await setContact(data.resource.items);
     
 };
 

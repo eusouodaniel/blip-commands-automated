@@ -45,11 +45,11 @@ server.get('/schedule/:id', (req, res) => {
 });
 
 server.get('/teams', (req, res) => {
-    const emails = ['email1@blip.ai', 'email12@blip.ai'];
+    const emails = ['daniels@take.net'];
     const teams = team.setMembers(emails);
 
     return res.json(teams);
 });
 
 
-server.listen(3333);
+server.listen(3000);
