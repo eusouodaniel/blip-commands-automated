@@ -1,6 +1,7 @@
 const express = require('express');
 const attendant = require('./services/attendant');
 const contact = require('./services/contact');
+const context = require('./services/context');
 const list = require('./services/list');
 const resource = require('./services/resource');
 const schedule = require('./services/schedule');
@@ -12,6 +13,12 @@ server.get('/attendants', (req, res) => {
     const attendants = attendant.getAllAttendants();
 
     return res.json(attendants);
+});
+
+server.get('/contexts', (req, res) => {
+    const contexts = context.getContacts();
+
+    return res.json(contexts);
 });
 
 server.get('/contacts', (req, res) => {
